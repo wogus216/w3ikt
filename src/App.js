@@ -5,6 +5,8 @@ import { useMediaQuery } from 'react-responsive';
 import { Header, Helmet, Hidden, PortfolioList, Tab } from './component';
 import video from '../src/assets/video/video.mp4';
 import mobileVideo from '../src/assets/video/mobileVideo.mp4';
+import kitae from '../src/assets/images/about/kitaePhoto.jpeg';
+
 function App() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   let title = 'About Me',
@@ -39,7 +41,7 @@ function App() {
               <div className="row row--35 align-items-center">
                 <div className="col-lg-5">
                   <div className="thumbnail">
-                    <img className="w-100" src="/assets/images/about/kitaePhoto.jpeg" alt="About Images" />
+                    <img className="w-100" src={kitae} alt="About Images" />
                   </div>
                 </div>
                 <div className="col-lg-7">

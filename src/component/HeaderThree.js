@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import { FiX, FiMenu } from 'react-icons/fi';
-import ScrollSpy from 'react-ui-scrollspy';
-
+import Scrollspy from 'react-scrollspy';
+import movieLogo from '../assets/images/logo/logo-symbol-dark.png';
 function HeaderThree({ logo, color = 'default-color', homeLink }) {
   const menuTrigger = () => {
     document.querySelector('.header-wrapper').classList.toggle('menu-open');
@@ -42,7 +42,7 @@ function HeaderThree({ logo, color = 'default-color', homeLink }) {
   } else if (logo === 'dark') {
     logoUrl = <img src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />;
   } else if (logo === 'symbol-dark') {
-    logoUrl = <img src="/assets/images/logo/logo-symbol-dark.png" alt="Digital Agency" />;
+    logoUrl = <img src={movieLogo} alt="Digital Agency" />;
   } else if (logo === 'symbol-light') {
     logoUrl = <img src="/assets/images/logo/logo-symbol-light.png" alt="Digital Agency" />;
   } else {
@@ -57,7 +57,7 @@ function HeaderThree({ logo, color = 'default-color', homeLink }) {
             <a href={homeLink}>{logoUrl}</a>
           </div>
           <nav className="mainmenunav d-lg-block ml--50">
-            <ScrollSpy className="mainmenu" items={['home', 'about', 'portfolio']} currentClassName="is-current" offset={-50}>
+            <Scrollspy className="mainmenu" items={['home', 'about', 'portfolio']} currentClassName="is-current" offset={-50}>
               <li>
                 <a href="#home">Home</a>
               </li>
@@ -68,7 +68,7 @@ function HeaderThree({ logo, color = 'default-color', homeLink }) {
               <li>
                 <a href="#portfolio">Portfolio</a>
               </li>
-            </ScrollSpy>
+            </Scrollspy>
           </nav>
         </div>
         <div className="header-right">
